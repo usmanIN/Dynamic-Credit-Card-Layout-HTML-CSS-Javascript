@@ -26,7 +26,16 @@
     
         input.forEach(function(e){
             
-            e.addEventListener("keydown",function(key){
+           
+            e.addEventListener("keydown",function(key){    
+                
+
+                let pattern = /^\d+$/;
+                if(!pattern.test(e.value)){
+                    e.value = e.value.slice(0,-1); //e.value.substring(0, e.value.length-1);
+                } 
+                
+                //pattern.test(e.value.replace(/ /g,'').replace(/[a-z]+/g,''))
                 // if(key.keyCode == 17 &&  key.keyCode == 86) key.preventDefault();
                 // if(key.keyCode > 57) key.preventDefault();
                 // if(key.keyCode === 32) key.preventDefault();
@@ -52,6 +61,8 @@
                         }
                     }
                 }  
+
+
             });
         });
     
