@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit card Component</title>
+    <link rel="stylesheet" href="./assest/style.css" />
+</head>
+<body>
+    <div class="container" id="first">
+        <h1>Build Credit Card Layout</h1>
+        <br/>
+        <form>            
+            <input type="text" placeholder="Length of Digits">
+            <input type="text" placeholder="Number of Textfield">
+            <input type="submit"/>
+        </form>
+        <br/>
+        <p>* Only divisble values required e.g. (16,4) (8,2) (14,7) or (14,2)</p>
+    </div>
+    <div class="container" id="main">
+        <div class="card">
+            <div class="card-content">      
+                <h1>Credit Card Number</h1>          
+                <p>Enter your card detils for secure payment! Join with our beautiful family.</p>
+                <form>
+                    <div id="demo"></div>        
+                    <input type="submit" />
+                </form>
+                <p style="color: red; font-style: italic; font-size: 12px;">* Only numeric value allows</p>
+                <p id="message"></p>
+            </div>
+        </div>
+        
+
+        <div class="table" id="table"></div>        
+</div>
+    <script type="text/javascript" src="./assest/script.js"></script>
+    <script>
+
+    let content = []; 
+        document.querySelector("#main").style.display = "none";
+
+        document.querySelector("#first form").addEventListener("submit",function(e){
+            e.preventDefault();
+            digit = this.querySelectorAll("input")[0].value;
+            size = this.querySelectorAll("input")[1].value;
+            if(digit%size != 0){
+                return;
+            }
+            
+            DesignCard("#main #demo",size,digit);
+    
+            let form = document.querySelector("#main form");        
+       
+            
+            form.addEventListener("submit",function(e){
+                e.preventDefault();
+                let text = '';
+                this.querySelectorAll("input[type='text']").forEach(function(e){
+                    text+= e.value;
+                });
+                
+                if(text.length > 0){
+                    content.push(text);
+                    this.querySelectorAll("input[type='text']").forEach(function(e){
+                        e.value = '';
+                    });
+                }                
+                CardView(digit/size);
+            });
+
+            this.parentNode.style.display = "none";
+            document.querySelector("#main").style.display = "block";
+    
+        });
+
+        
+    </script>
+</body>
+</html>

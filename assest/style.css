@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;    
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: #0575E6;
+    background: linear-gradient(to right, #0575E6, #021B79) no-repeat;
+}
+.container{
+    padding: 0 15%;
+    position: relative;
+}
+
+#first{    
+    background: #fff;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    padding: 40px;
+    text-align: center;
+    border-bottom: 10px solid #00b894;
+}
+
+.card{
+    width: 100%;
+    height: 100%;    
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content{
+    background: #fff;
+  padding: 40px;
+  width: 100%;
+  /* max-width: 500px;
+  min-width: 200px; */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card-content form{
+    padding: 15px;
+}
+
+form input{
+    border: unset;
+    background-color:  #e4eff8;
+    padding: 15px;
+    font-size: 13px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 10px;
+}
+input:focus{
+    outline: none;
+}
+
+form input[type='submit'] {
+  background-color: #0575E6;
+  color: #fff;
+  border: unset;
+  width: 120px;
+  border-radius: 50px;
+  padding: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+form #demo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.table{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* .table table{
+    width: 100%;
+}
+.table-content thead tr{
+    background-color: #15172b;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.table-content tr{
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+.table-content td:first-child{
+    flex-basis: 80%;
+}
+.table-content td:last-child{
+    flex-basis: 20%;
+}
+
+.table-content  button {
+    /background: #00b894;
+    border: none;
+    width: 100%;
+    padding: 12px 10px 10px 10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #ECECEC;
+    cursor: pointer;
+  }
+.table-content .button:hover {
+    background: #16A085;
+  } */
+
+  
+  .credit .credit-content{
+      position: relative;
+    margin: 20px;
+    padding: 20px;
+    width: 400px;
+    min-height: 200px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    background: radial-gradient(#f588d8, #c0a3e5);
+  } 
+
+  .credit h3{
+      font-weight: 600;
+  }
+.credit .credit-number{
+    
+    margin-top: 15%;
+    text-align: center;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.9);
+}
+.credit .credit-exp{
+    text-align: right;
+    margin-top:20%;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 700;
+}
+.credit .credit-name{
+    margin-top: 1em;
+    font-weight: 600;
+}
+.credit .credit-logo{
+    position: absolute;
+    font-size: 40px;
+    font-weight: 800;
+    bottom: 0px;
+    right: 0;
+    padding: inherit;
+}
+.credit .credit-button{
+    position: absolute;
+    background: #00b894;
+    border: none;
+    right: 0;
+    
+    padding: 5px 10px 5px 10px;
+    
+     border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #ECECEC;
+    cursor: pointer;
+}
